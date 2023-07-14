@@ -19,6 +19,9 @@ return {
 
   {
     "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-emoji",
+    },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
       local luasnip = require("luasnip")
@@ -39,6 +42,7 @@ return {
         { name = "luasnip", priority = 750 },
         { name = "buffer", priority = 500 },
         { name = "path", priority = 250 },
+        { name = "emoji" },
       })
 
       -- opts.mapping = vim.tbl_extend("force", opts.mapping, {
