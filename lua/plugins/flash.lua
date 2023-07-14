@@ -3,6 +3,7 @@ return {
     "folke/flash.nvim",
     opts = {
       label = {
+        uppercase = false,
         after = false,
         before = true,
       },
@@ -30,6 +31,13 @@ return {
           },
         },
       },
+    },
+    -- stylua: ignore
+    keys = {
+      { "s", mode = { "n", "x", "o" }, false },
+      { "S", mode = { "n", "o", "x" }, false },
+      { "<leader>a", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+      { "<leader>A", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
     },
   },
 }
