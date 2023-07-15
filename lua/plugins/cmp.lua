@@ -27,7 +27,7 @@ return {
       local luasnip = require("luasnip")
       local cmp = require("cmp")
 
-      -- opts.preselect = cmp.PreselectMode.None
+      opts.preselect = cmp.PreselectMode.None
       opts.completion.completeopt = "menu,menuone,noselect"
       opts.formatting.fields = { "kind", "abbr", "menu" }
       -- opts.experimental = {
